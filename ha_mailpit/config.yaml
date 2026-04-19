@@ -1,6 +1,6 @@
 name: ha-mailpit
-version: "0.1.0"
-slug: ha-mailpit
+version: "0.1.1"
+slug: ha_mailpit
 description: Mailpit email capture and preview inbox for Home Assistant
 url: https://github.com/Noptech/ha-mailpit
 image: ghcr.io/noptech/ha-mailpit
@@ -16,8 +16,6 @@ ports_description:
   1025/TCP: SMTP capture endpoint
   8025/TCP: Web UI and HTTP API
 options:
-  ui_basic_auth_username: null
-  ui_basic_auth_password: null
   max_messages: 500
   max_age_days: 0
   storage_path: /data/mailpit.db

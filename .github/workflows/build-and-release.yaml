@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "ha-mailpit/**"
+      - "ha_mailpit/**"
       - ".github/workflows/build-and-release.yaml"
       - "repository.yaml"
       - "README.md"
@@ -40,7 +40,7 @@ jobs:
         id: info
         uses: home-assistant/actions/helpers/info@master
         with:
-          path: "./ha-mailpit"
+          path: "./ha_mailpit"
 
       - name: Normalize app information
         id: normalize
@@ -88,7 +88,7 @@ jobs:
         with:
           arch: ${{ matrix.arch }}
           container-registry-password: ${{ secrets.GITHUB_TOKEN }}
-          context: "./ha-mailpit"
+          context: "./ha_mailpit"
           image: ${{ matrix.image }}
           image-tags: |
             ${{ needs.prepare.outputs.version }}

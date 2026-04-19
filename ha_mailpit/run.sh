@@ -3,12 +3,20 @@ set -euo pipefail
 
 AUTH_FILE="/data/mailpit-ui-auth.txt"
 STORAGE_PATH="$(bashio::config 'storage_path')"
-USERNAME="$(bashio::config 'ui_basic_auth_username')"
-PASSWORD="$(bashio::config 'ui_basic_auth_password')"
+USERNAME=""
+PASSWORD=""
 MAX_MESSAGES="$(bashio::config 'max_messages')"
 MAX_AGE_DAYS="$(bashio::config 'max_age_days')"
 
 mkdir -p "$(dirname "${STORAGE_PATH}")"
+
+if bashio::config.has_value 'ui_basic_auth_username'; then
+  USERNAME="$(bashio::config 'ui_basic_auth_username')"
+fi
+
+if bashio::config.has_value 'ui_basic_auth_password'; then
+  PASSWORD="$(bashio::config 'ui_basic_auth_password')"
+fi
 
 if [[ -n "${USERNAME}" && -n "${PASSWORD}" ]]; then
   bashio::log.info "Using configured UI basic auth credentials."
