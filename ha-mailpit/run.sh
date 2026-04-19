@@ -16,8 +16,8 @@ if [[ -n "${USERNAME}" && -n "${PASSWORD}" ]]; then
   chmod 600 "${AUTH_FILE}"
 elif [[ -z "${USERNAME}" && -z "${PASSWORD}" ]]; then
   if [[ ! -f "${AUTH_FILE}" ]]; then
-    USERNAME="mailpit-$(tr -dc 'a-z0-9' </dev/urandom | head -c 8)"
-    PASSWORD="$(tr -dc 'A-Za-z0-9' </dev/urandom | head -c 32)"
+    USERNAME="mailpit-$(od -An -N4 -tx1 /dev/urandom | tr -d ' \n')"
+    PASSWORD="$(od -An -N16 -tx1 /dev/urandom | tr -d ' \n')"
     printf '%s:%s\n' "${USERNAME}" "${PASSWORD}" > "${AUTH_FILE}"
     chmod 600 "${AUTH_FILE}"
     bashio::log.warning "No UI basic auth credentials were configured; generated new credentials."
