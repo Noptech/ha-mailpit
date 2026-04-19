@@ -1,0 +1,29 @@
+name: Tessera Mailpit
+version: "0.1.0"
+slug: tessera-mailpit
+description: Mailpit email capture and preview inbox for Home Assistant
+url: https://github.com/Noptech/ha-mailpit
+arch:
+  - amd64
+  - aarch64
+  - i386
+startup: application
+webui: "http://[HOST]:[PORT:8025]"
+ports:
+  1025/tcp: 1025
+  8025/tcp: 8025
+ports_description:
+  1025/TCP: SMTP capture endpoint
+  8025/TCP: Web UI and HTTP API
+options:
+  ui_basic_auth_username: null
+  ui_basic_auth_password: null
+  max_messages: 500
+  max_age_days: 0
+  storage_path: /data/mailpit.db
+schema:
+  ui_basic_auth_username: str?
+  ui_basic_auth_password: password?
+  max_messages: int(0,)
+  max_age_days: int(0,)
+  storage_path: str

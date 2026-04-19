@@ -1,0 +1,19 @@
+configuration:
+  ui_basic_auth_username:
+    name: UI basic auth username
+    description: Username for the Mailpit web UI and HTTP API basic auth.
+  ui_basic_auth_password:
+    name: UI basic auth password
+    description: Password for the Mailpit web UI and HTTP API basic auth.
+  max_messages:
+    name: Maximum messages
+    description: Maximum number of messages to keep before pruning the oldest messages.
+  max_age_days:
+    name: Maximum age in days
+    description: Delete messages after this many days. Set to 0 to disable age-based pruning.
+  storage_path:
+    name: Storage path
+    description: Path to the persistent Mailpit database file.
+network:
+  1025/TCP: SMTP capture endpoint
+  8025/TCP: Web UI and HTTP API
