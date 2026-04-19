@@ -47,6 +47,8 @@ jobs:
         shell: bash
         run: |
           image='${{ steps.info.outputs.image }}'
+          image="${image%\"}"
+          image="${image#\"}"
           echo "image_name=${image##*/}" >> "$GITHUB_OUTPUT"
           echo "registry_prefix=${image%/*}" >> "$GITHUB_OUTPUT"
           echo "version=${{ steps.info.outputs.version }}" >> "$GITHUB_OUTPUT"
