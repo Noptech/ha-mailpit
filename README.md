@@ -4,11 +4,11 @@ Home Assistant add-on repository for Mailpit.
 
 ## Add-on
 
-- `tessera-mailpit`
+- `ha-mailpit`
 
 Published image:
 
-- `ghcr.io/noptech/tessera-mailpit`
+- `ghcr.io/noptech/ha-mailpit`
 
 ## Purpose
 
@@ -22,7 +22,7 @@ web UI and HTTP API.
 2. Go to `Settings` -> `Add-ons` -> `Add-on Store`.
 3. Add this repository URL:
    `https://github.com/Noptech/ha-mailpit`
-4. Install `Tessera Mailpit`.
+4. Install `ha-mailpit`.
 
 ## Access
 

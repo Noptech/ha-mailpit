@@ -1,4 +1,4 @@
-# Tessera Mailpit
+# ha-mailpit
 
 Mailpit packaged as a Home Assistant add-on.
 

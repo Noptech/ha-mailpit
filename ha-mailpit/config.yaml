@@ -1,9 +1,9 @@
-name: Tessera Mailpit
+name: ha-mailpit
 version: "0.1.0"
-slug: tessera-mailpit
+slug: ha-mailpit
 description: Mailpit email capture and preview inbox for Home Assistant
 url: https://github.com/Noptech/ha-mailpit
-image: ghcr.io/noptech/tessera-mailpit
+image: ghcr.io/noptech/ha-mailpit
 arch:
   - amd64
   - aarch64

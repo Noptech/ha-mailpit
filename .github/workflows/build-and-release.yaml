@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "tessera-mailpit/**"
+      - "ha-mailpit/**"
       - ".github/workflows/build-and-release.yaml"
       - "repository.yaml"
       - "README.md"
@@ -40,7 +40,7 @@ jobs:
         id: info
         uses: home-assistant/actions/helpers/info@master
         with:
-          path: "./tessera-mailpit"
+          path: "./ha-mailpit"
 
       - name: Normalize app information
         id: normalize
@@ -86,7 +86,7 @@ jobs:
         with:
           arch: ${{ matrix.arch }}
           container-registry-password: ${{ secrets.GITHUB_TOKEN }}
-          context: "./tessera-mailpit"
+          context: "./ha-mailpit"
           image: ${{ matrix.image }}
           image-tags: |
             ${{ needs.prepare.outputs.version }}
