@@ -6,6 +6,10 @@ Home Assistant add-on repository for Mailpit.
 
 - `tessera-mailpit`
 
+Published image:
+
+- `ghcr.io/noptech/tessera-mailpit`
+
 ## Purpose
 
 This repository packages Mailpit for Home Assistant OS so preview and testing
@@ -26,6 +30,10 @@ web UI and HTTP API.
 - Web UI / HTTP API: `8025`
 
 The add-on is intended to be used behind Cloudflare Tunnel or LAN access.
+
+## Releases
+
+Tagged releases publish multi-arch images to GHCR and create a GitHub Release.
 
 ## Authentication
 
