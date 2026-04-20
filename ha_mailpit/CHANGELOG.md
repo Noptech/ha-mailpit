@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Use Supervisor-compatible port description keys.
+
 ## 0.1.2
 
 - Add the add-on README required for Home Assistant store presentation.

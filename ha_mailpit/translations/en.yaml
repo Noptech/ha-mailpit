@@ -15,5 +15,5 @@ configuration:
     name: Storage path
     description: Path to the persistent Mailpit database file.
 network:
-  1025/TCP: SMTP capture endpoint
-  8025/TCP: Web UI and HTTP API
+  1025/tcp: SMTP capture endpoint
+  8025/tcp: Web UI and HTTP API
