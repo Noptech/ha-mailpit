@@ -1,5 +1,5 @@
 name: ha-mailpit
-version: "0.1.3"
+version: "0.1.4"
 slug: ha_mailpit
 description: Mailpit email capture and preview inbox for Home Assistant
 url: https://github.com/Noptech/ha-mailpit
@@ -8,6 +8,7 @@ arch:
   - amd64
   - aarch64
 startup: application
+init: false
 webui: "http://[HOST]:[PORT:8025]"
 ports:
   1025/tcp: 1025

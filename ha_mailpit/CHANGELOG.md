@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+- Disable Docker init for the Home Assistant S6-overlay v3 base image.
+
 ## 0.1.3
 
 - Use Supervisor-compatible port description keys.
