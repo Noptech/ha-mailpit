@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Add the add-on README required for Home Assistant store presentation.
+
 ## 0.1.1
 
 - Use a Supervisor-safe internal slug.
